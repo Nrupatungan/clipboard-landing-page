@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'baijamjuree-reg';
+    src: url(./assets/fonts/baijamjuree-regular-webfont.woff2) format("woff2"),
+        url(./assets/fonts/baijamjuree-regular-webfont.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'baijamjuree-semi';
+    src: url(./assets/fonts/baijamjuree-semibold-webfont.woff2) format("woff2"),
+        url(./assets/fonts/baijamjuree-semibold-webfont.woff) format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+:root{
+    /* Primary */
+    --Strong_Cyan: hsl(171, 66%, 44%);
+    --Light_Blue: hsl(233, 100%, 69%);
+    
+    /* Neutral */
+    --Dark_Grayish_Blue: hsl(210, 10%, 33%);
+    --Grayish_Blue: hsl(201, 11%, 66%);
+
+    /* Fonts */
+    --baija_Regular: 'baijamjuree-reg', sans-serif;
+    --baija_Semi-bold: 'baijamjuree-semi', sans-serif;
+}
+
+html{
+    font-size: 18px;
+}
+
+body{
+    font-family: var(--baija_Regular);
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+header{
+    padding: 7rem;
+    background: url(./assets/images/bg-header-mobile.png) no-repeat;
+    background-size: contain;
+}
+
+.c-logo{
+    margin-bottom: 4rem;
+}
+
+h1, h2, h3{
+    font-family: var(--baija_Semi-bold);
+    color: var(--Dark_Grayish_Blue);
+}
+
+p{
+    color: var(--Grayish_Blue);
+    font-size: 0.88rem;
+    line-height: 1.8;
+}
+
+h1{
+    font-size: 1.8rem;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+h3{
+    font-size: 1.18rem;
+}
+
+header p{
+    max-width: calc((623.733/18) * 1rem);
+}
+
+.btn-holder button{
+    color: #fff;
+    padding: 0.7rem 0;
+    max-width: calc((312.3/18) * 1rem);
+    border-bottom: 4px inset;
+}
+
+.btn-holder button:nth-child(1){
+    background-color: var(--Strong_Cyan);
+    border-color: hsl(171, 43%, 36%);
+}
+
+.btn-holder button:nth-child(2){
+    background-color: var(--Light_Blue);
+    border-color: hsl(233, 47%, 45%);
+}
+
+main{
+    margin-bottom: 35rem;
+}
+
+section[aria-label="sec-2"]{
+    max-width: calc((800/18) * 1rem);
+}
+
+section[aria-label="sec-3"]{
+    max-width: 85vw;
+}
+
+p[aria-label="sec-1-paragraph"]{
+    max-width: calc((650/18) * 1rem);
+    margin-bottom: 4rem;
+}
+
+img[alt="computer image"]{
+    max-width: 100%;
+}
+
+section[aria-label="sec-1"], section[aria-label="sec-4"]{
+    margin-bottom: 6rem;
+}
+
+section[aria-label="sec-2"]{
+    margin-bottom: 3rem;
+}
+
+section[aria-label="sec-3"]{
+    margin-bottom: 4rem;
+}
+
+section[aria-label="sec-2"] h2, section[aria-label="sec-3"] h2{
+    margin-bottom: 1rem;
+}
+
+section[aria-label="sec-2"] p, section[aria-label="sec-3"] p{
+    margin-bottom: 2.5rem;
+}
+
+section[aria-label="sec-3"] article{
+    padding-top: 1rem;
+}
+
+section[aria-label="sec-3"] article:nth-child(1) img{
+    margin-bottom: 2.5rem;
+}
+
+section[aria-label="sec-3"] article img{
+    margin-bottom: 2.95rem;
+}
+
+section[aria-label="sec-3"] article p{
+    max-width: calc((321/18) * 1rem);
+    font-size: 0.9rem;
+}
+
+section[aria-label="sec-5"] p{
+    max-width: calc((650/18) * 1rem);
+    font-size: 0.9rem;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(238, 240, 242);
+    margin-top: 7rem;
+    padding: 2rem 1rem;
+}
+
+footer p{
+    color: var(--Dark_Grayish_Blue);
+}
+
+#footer-logo{
+    width: 5rem;
+}
+
+.attribution { 
+    font-size: calc((11/18)*1rem);
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media  only screen and (min-width: 576px){
+
+    img[alt="computer image"]{
+        position: absolute;
+        max-height: 25rem;
+        transform: translateX(-75%);
+    }
+
+    div[aria-details="flex-text"]{
+        padding-top: 2rem;
+    }
+
+    div[aria-label="icon holder"] img{
+        width: 1.5rem;
+        height: 1.5em;
+    }
+}
+
+@media  only screen and (min-width: 705px) {
+    h1{
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 0.95rem;
+    }
+
+    header{
+        background: url(./assets/images/bg-header-desktop.png) no-repeat;
+        background-size: contain;
+    }
+
+    .btn-holder button{
+        width: calc((270/18) * 1rem);
+    }
+    .btn-holder button:nth-child(1){
+        margin-right: 1.3rem;
+    }
+}
+
+@media  only screen and (min-width: 768px){
+    html{
+        font-size: 18.5px;
+    }
+
+    div[aria-label="icon holder"] img{
+        width: 1.5rem;
+        height: 1.5em;
+    }
+}
+
+@media  only screen and (min-width: 992px){
+
+    html{
+        font-size: 19px;
+    }
+    
+    img[alt="computer image"]{
+        max-height: unset;
+        max-width: 35rem;
+    }
+
+    section[aria-label="sec-1"]{
+        margin-bottom: 7rem;
+    }
+
+    div[aria-details="flex-text"]{
+        padding-top: 3rem;
+    }
+}
+
+@media  only screen and (min-width: 1200px){
+
+    html{
+        font-size: 20px;
+    }
+
+    main{
+        margin-bottom: 20rem;
+    }
+
+    section[aria-label="sec-1"]{
+        margin-bottom: 8rem;
+    }
+
+    div[aria-details="flex-text"]{
+        padding-top: 5rem;
+    }
+
+    section[aria-label="sec-3"] article p{
+        max-width: calc((350/18) * 1rem);
+        font-size: 0.9rem;
+    }
+}
+
+@media  only screen and (min-width: 1400px){
+    html{
+        font-size: 21px;
+    }
+    
+    img[alt="computer image"]{
+        max-width: 100%;
+    }   
+
+    div[aria-details="flex-text"]{
+        padding-top: 5rem;
+    }  
+}
